@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="http://www.brendancopley.com/wp-content/uploads/2016/07/logo.png" /> 
+  <title>Brendan Copley Programmer and Search Engine Optimization Expert | Brendan Copley</title>
+  <meta property="og:description" content="Programmer and Search Engine Optimization Expert | Brendan Copley" />
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet" />
+	<link href="css/jumbotron-narrow.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.0.1.js"></script>
+  </head>
+  <body ng-app="myApp">
+	<div class="container" ng-controller="MainController">
+		<div class="page-header">
+			<h1><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/angular-logo.svg" alt="Angular.js Logo" width="50" height="50" /> AngularJs <small>Resume - by Brendan Copley</small></h1>
+			<p>This is my updated Resume, hand coded and built on Bootstrap & AngularJs. <a href="javascript:window.print()">Print / Download as PDF</a> | <a href="https://github.com/brendancopley/resume" target="_blank">Get Source Code on my Github Page</a></p>
+		  </div>
+		<div class="col-md-4 left-sidebar text-center">
+			<div class="sidebar">
+			<h1> {{ personName | uppercase }}</h1>
+			<img ng-src="{{ personInitials }}">
+			<h3>Web Designer</h3>
+			<hr>
+			<h3>Expertise</h3>
+			<img style="padding-bottom:10px;" ng-src="{{ checkMark }}">
+			<div ng-repeat="skill in skills">
+			<p>{{ skill.talent }}</p>
+			</div>
+			<hr>
+			<div class="techSkills">
+			<h3>Tech Skills</h3>
+			<img style="padding-bottom:20px;" ng-src="{{ superSkill }}">
+			<div ng-repeat="level in levels">
+			<level-info info="level"></level-info>
+			</div>
+			</div>
+			<hr>
+			<h3>Contact Me</h3>
+			<p style="list-style:none;text-align:left; font-weight:300; font-size:22px; line-height:48px;">
+			Brendan Copley<br>
+			+1 949-536-9250<br>
+			brendan@brendancopley.com<br>
+			<a href="http://www.brendancopley.com/" target="_blank" style="color:#fff;">www.brendancopley.com</a></p>
+			</div>
+		</div>
+		<div class="col-md-8 main-resume">
+			<div class="mainArea">
+				<div class="header1">
+					<h2 style="text-align:left;"><img class="round" ng-src="{{ profileTitle }}"> Profile</h2>
+					<p>Full-Stack developer with over eight years of experience. I treat every new obstacle with tenacity and creativity. My passion for coding motivates me to constantly learn new technologies while working on mastering my current skill set. Those skills have allowed me to excel as part of a team and have proven myself to be able to lead a team when needed.</p>
+				</div>
+				<hr>
+				<div class="header1">
+					<h2 style="text-align:left;"><img class="round" ng-src="{{ profileExp }}"> Experience</h2>
+					<div class="section">
+						<p><strong>Senior Web & UX Developer - Young Company Creative Communications</strong><br>
+						Laguna Beach, CA | June 2016 - Current<br>
+						<ul>
+						<li>Web developing under agile workflow of wire framing design, setting up staging area on separate server, developing on staging area, getting feedback, implementing changes, testing for Jank, remove jankiness, Getting final approval, then push live via FTP or SSH, implement analytics tags and then test again.</li>
+						<li>Making sure all client sites were up to Mobile / Different formatting standards. Sped up client sites with proper congregation & minification, implementation of CDN and controlling the DOM. Designing UI/UX to compliment client sites, like developing interactive elements & styles.</li>
+						<li>Building Google AMP landing pages, lead to optimized mobile experience, lower bounce rates. Also integrated Openauth for user registration & checkout on client website.</li>
+						<li>Led the implementation of a web app used on landing pages that improved the customer experience with an 3D VR experience for Web & Mobile. The VR web app was based off threejs.</li>
+						</ul>
+						</p>
+					</div>
+					<div class="section">
+						<p><strong>Web Designer & SEO Marketing Manager - AKUA Mind & Body</strong><br>
+						Newport Beach, CA | Jan 2016 - June 2016<br>
+						<ul>
+						<li>Took initiative to develop an in house analytical solution to help CEO and VPs visualize lead sources with web site pulling different analytics sources together in a dashboard. Base design used bootstrap. Also Redesigned Website, set up job board and created hand coded bootstrap landing pages.</li>
+						<li>Salesforce workflow setup for 8-10 team of sales reps, using workflow rules to make the sales process more streamlined, setting up unique email triggers based on lead sources, set up web forms on website & landing pages that would integrate with salesforce, email marketing, call tracking metrics.</li>
+						<li>Set up integration between their verification of benefits provider API & salesforce using the web hook api it would post information to their insurance company verification system.</li>
+						</ul>
+						</p>
+					</div>
+					<div class="section">
+						<p><strong>Freelance Web Developer - Self-Employed</strong><br>
+						Irvine, CA | May 2009 - Jan 2016<br>
+						<ul>
+						<li>Responsibilities to the clients included creating websites for their company, worked on e-commerce site setup, also developing content for the companys corporate sites and various other company brand sites</li>
+						<li>Created Android & iOS conference app for a company called CGACC in partnership with AIRC Conference, this would prompt new users to register using OpenAuth with Linkedin, Google or Facebook</li>
+						<li>Updated and maintain the companys web database on PHP & MySQL. Responsible for the setup of all of the analytical tracking and reporting.</li>
+						</ul>
+						</p>
+					</div>
+					<div class="section">
+						<p><strong>IT Manager/ Compliance Manager  - Student Loan Aid, LLC</strong><br>
+						Newport Beach, CA | May 2014 - May 2015<br>
+						<ul>
+						<li>Was the first sales superstar for the company my first week generated 17 sales and third day I started I had 6 sales in one day, quickly promoted to Manager and responsible for IT & Compliance</li>
+						<li>In addition to trained sales reps, customer service reps on how to use CRM. Responsible for online reputation management and dealing with customer tech issues on client dashboard</li>
+						<li>Setting up phone system for sales with a dialer system Ytel and call que rotations & customer service reps under RingCentral as well as IT computer setup for the 30+ computers.</li>
+						</ul>
+						</p>
+					</div>
+					<hr>
+				<div class="header1">
+					<h2 style="text-align:left;"><img class="round" ng-src="{{ profileEdu }}"> Education</h2>
+					<p>Saddleback College, Aliso Viejo, CA - Computer Science (Some coursework completed)<br>
+					University High school, Irvine, CA - Graduated 2009<br><br>
+					<span style="font-size:18px">Certification</span><br>
+					Marketing Certificate from Saddleback - 2011 <br>
+					Google Analytics Platform Principles - 2016 <br>
+					Google Adwords Certification - 2016<br>
+					Google Shopping Certification - 2016
+					</p>
+				</div>
+				</div>
+				<div class="footer">
+				<div class="container">
+					<div class="col-md-4">
+					<p style="line-height:32px;">brendan@brendancopley<br>
+					<a href="http://www.brendancopley.com/" target="_blank">www.brendancopley.com</a></p>
+					</div>
+					<div class="col-md-4 leftFooter">
+					<p style="line-height:32px;">+1 949-536-9250<br>
+					<a href="https://www.linkedin.com/in/brendancopley" target="_blank">linkedin.com/in/brendancopley</a></p>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+	
+	<!-- Directives -->
+	<script src="js/directives/levelInfo.js"></script>
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	  </body>
+</html>
